@@ -95,8 +95,8 @@ exports.updateBlogController = async (req, res) => {
 //SINGLE BLOG
 exports.getBlogIdController = async (req, res) => {
     try {
-        const { id } = req.params;
-        const blog = await blogModel.findById(id);
+        const id = req.params.id;
+        const blog = new mongoose.Types.ObjectId(id);
         if (!blog) {
             return res.status(404).send({
                 success: false,

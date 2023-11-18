@@ -119,10 +119,10 @@ export default function BlogCard({
             }}>
                 {isUser && (
                     <Box display={"flex"} >
-                        {/* <IconButton onClick={handleEdit} sx={{ marginLeft: "auto" }}>
+                        <IconButton onClick={handleEdit} sx={{ marginLeft: "auto" }}>
                             <ModeEditIcon color="info" />
-                        </IconButton> */}
-                        <IconButton onClick={handleDelete} sx={{ marginLeft: "auto" }}>
+                        </IconButton>
+                        <IconButton onClick={handleDelete} >
                             <DeleteIcon color="error" />
                         </IconButton>
                     </Box>
