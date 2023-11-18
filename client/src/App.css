@@ -1,0 +1,12 @@
+.likeColor {
+    color: #1a72f7;
+}
+
+.dislikeColor {
+    color: #f71a1a;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+}
