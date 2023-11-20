@@ -16,9 +16,9 @@ const BlogDetails = () => {
             if (data?.success) {
                 setBlog(data?.blog);
                 setInputs({
-                    title: data?.blog.title,
-                    description: data?.blog.description,
-                    image: data?.blog.image,
+                    title: data?.blogdata.title,
+                    description: data?.blogdata.description,
+                    image: data?.blogdata.image,
                 });
             }
         } catch (error) {

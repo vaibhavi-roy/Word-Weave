@@ -97,6 +97,7 @@ exports.getBlogIdController = async (req, res) => {
     try {
         const id = req.params.id;
         const blog = new mongoose.Types.ObjectId(id);
+        const blogdata = await blogModel.findById(id);
         if (!blog) {
             return res.status(404).send({
                 success: false,
@@ -107,6 +108,7 @@ exports.getBlogIdController = async (req, res) => {
             success: true,
             message: "fetch single blog",
             blog,
+            blogdata
         });
     } catch (error) {
         console.log(error);
