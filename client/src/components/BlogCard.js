@@ -34,7 +34,7 @@ export default function BlogCard({
 
     const handleDelete = async () => {
         try {
-            const { data } = await axios.delete(`/api/v1/blog/delete-blog/${id}`);
+            const { data } = await axios.delete(`https://word-weave-edj4.onrender.com/api/v1/blog/delete-blog/${id}`);
             if (data?.success) {
                 toast.success("Blog Deleted");
                 // navigate("/my-blogs");
@@ -45,62 +45,6 @@ export default function BlogCard({
         }
     }
 
-    // let addLike = () => {
-    //     let newCount = this.state.likes + 1;
-    //     this.setState({
-    //         likes: newCount
-    //     });
-    // };
-
-
-    // const handleLike = (e) => {
-    //     e.target.closest('svg').classList.toggle('likeColor');
-    // }
-
-    // const handleDislike = (e) => {
-    //     e.target.closest('svg').classList.toggle('dislikeColor');
-    // }
-
-
-    // const handleLike = (post) => {
-    //     setPosts((prevPosts) =>
-    //         prevPosts.map((post) =>
-    //             post.id === post
-    //                 ? {
-    //                     ...post,
-    //                     upvotes: post.activeUp ? post.likes - 1 : post.likes + 1,
-    //                     activeUp: !post.activeUp && !post.activeDn,
-    //                     activeDn: false,
-    //                 }
-    //                 : post
-
-    //         )
-    //     );
-    // };
-
-    // const handleDislike = (post) => {
-    //     setPosts((prevPosts) =>
-    //         prevPosts.map((post) =>
-    //             post.id === post
-    //                 ? {
-    //                     ...post,
-    //                     downvotes: post.activeDn
-    //                         ? post.likes - 1
-    //                         : post.likes + 1,
-    //                     activeDn: !post.activeDn && !post.activeUp,
-    //                     activeUp: false,
-    //                 }
-    //                 : post
-    //         )
-    //     );
-    // };
-
-    // const [posts, setPosts] = useState([
-    //     {
-    //         likes: 2000,
-    //         dislikes: 2,
-    //     }
-    // ])
 
     return (
         <div className='cards'>
@@ -151,15 +95,7 @@ export default function BlogCard({
                     </Typography>
                 </CardContent>
 
-                <Box display={"flex"}>
-                    {/* <IconButton onClick={(post) => handleLike(post)} sx={{ marginLeft: "auto" }}>
-                    <ThumbUpIcon />
-                </IconButton>
-                <IconButton onClick={(post) => handleDislike(post)}>
-                    <ThumbDownIcon />
-                </IconButton> */}
-                    {/* <button onClick={this.addLike}>Likes: {this.state.likes} </button> */}
-                </Box>
+
             </Card>
         </div>
     );

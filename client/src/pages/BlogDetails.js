@@ -11,7 +11,7 @@ const BlogDetails = () => {
     // get blog details
     const getBlogDetail = async () => {
         try {
-            const { data } = await axios.get(`/api/v1/blog/get-blog/${id}`);
+            const { data } = await axios.get(`https://word-weave-edj4.onrender.com/api/v1/blog/get-blog/${id}`);
             console.log(data);
             if (data?.success) {
                 setBlog(data?.blog);

@@ -30,7 +30,7 @@ const Register = () => {
 
         try {
             const { data } = await axios.post(
-                "/api/v1/user/register", {
+                "https://word-weave-edj4.onrender.com/api/v1/user/register", {
                 username: inputs.name,
                 email: inputs.email,
                 password: inputs.password,
