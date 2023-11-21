@@ -6,23 +6,23 @@ const router = express.Router();
 
 //routes
 //GET || all blogs
-router.get('https://word-weave-edj4.onrender.com/all-blog', getAllBlogsController);
+router.get('/all-blog', getAllBlogsController);
 
 //POST || create blog
-router.post('https://word-weave-edj4.onrender.com/create-blog', createBlogController);
+router.post('/create-blog', createBlogController);
 
 //PUT || update blog
-router.put('https://word-weave-edj4.onrender.com/update-blog/:id', updateBlogController);
+router.put('/update-blog/:id', updateBlogController);
 
 //GET || Single Blog Details
-router.get('https://word-weave-edj4.onrender.com/get-blog/:id', getBlogIdController);
+router.get('/get-blog/:id', getBlogIdController);
 
 //DELETE || delete blog
-router.delete('https://word-weave-edj4.onrender.com/delete-blog/:id', deleteBlogController);
+router.delete('/delete-blog/:id', deleteBlogController);
 
 
 //GET || use blog
-router.get('https://word-weave-edj4.onrender.com/user-blog/:id', userBlogController);
+router.get('/user-blog/:id', userBlogController);
 
 
 module.exports = router;
